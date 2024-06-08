@@ -1,15 +1,31 @@
 import "./App.css";
+/*-------------------------------------------------------------------*/
+import { useState } from "react";
+/*-------------------------------------------------------------------*/
+import BikeCrudFeature from "./components/BikeCrudFeature/BikeCrudFeature.jsx";
+import MobileCrudFeature from "./components/MobileCrudFeature/MobileCrudFeature.jsx";
 
-import MyReactFormCase_1 from "./components/MyReactFormCase_1/MyReactFormCase_1.jsx";
-import MyReactFormCase_2 from "./components/MyReactFormCase_2/MyReactFormCase_2.jsx";
-import MyReactFormCase_3 from "./components/MyReactFormCase_3/MyReactFormCase_3.jsx";
+/*-------------------------------------------------------------------*/
 
 function App() {
+  const [showBikeCrudFeature, setShowBikeCrudFeature] = useState(false);
+
   return (
-    <div className="app vh-100 d-flex gap-4 align-items-center justify-content-center">
-      <MyReactFormCase_1 />
-      <MyReactFormCase_2 />
-      <MyReactFormCase_3 />
+    <div className="app m-2">
+      <button
+        type="button"
+        className="domainButton btn btn-sm btn-outline-dark w-100 mb-1 text-danger"
+        onClick={() => {
+          setShowBikeCrudFeature((prevState) => {
+            return !prevState;
+          });
+        }}
+      >
+        Show {!showBikeCrudFeature ? "Bike" : "Mobile"} CRUD Feature
+      </button>
+      <div className="crud-feature d-flex gap-2 justify-content-center">
+        {showBikeCrudFeature ? <BikeCrudFeature /> : <MobileCrudFeature />}
+      </div>
     </div>
   );
 }

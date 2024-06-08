@@ -1,9 +1,9 @@
 body {
     font-style: normal;
-    font-weight: normal;
+    font-weight: 600;
     font-size: medium;
     font-family: "Urbanist", serif;
-    background-image: linear-gradient(lightcyan, white, lightcyan);
+    background-color: #c6ffb3;
 }
 
 @font-face {
