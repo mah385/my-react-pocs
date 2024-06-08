@@ -1,28 +1,38 @@
 import stylesMyForm from "../MyForm.module.css";
-// import styles from "./MyFormInput.module.css";
+// import styles from "./MyFormSelect.module.css";
 /*-------------------------------------------------------------------*/
 import PropTypes from "prop-types";
 
 /*-------------------------------------------------------------------*/
 
-function MyFormInput(props) {
+function MyFormSelect(props) {
   return (
     <div className={`${stylesMyForm.inputContainer} input-group m-2`}>
       <div className={`${stylesMyForm.inputLabel} input-group-text`}>
         {props.label}
       </div>
-      <input
+      <select
         {...props}
         ref={props.refer}
-        className={`${stylesMyForm.inputField} form-control`}
-      />
+        className={`${stylesMyForm.inputField} form-select`}
+      >
+        <option>Please Select</option>
+        {props.options.map((option, index) => {
+          return (
+            <option key={index} value={option}>
+              {option}
+            </option>
+          );
+        })}
+      </select>
     </div>
   );
 }
 
-export default MyFormInput;
+export default MyFormSelect;
 
-MyFormInput.propTypes = {
+MyFormSelect.propTypes = {
   label: PropTypes.string,
   refer: PropTypes.func,
+  options: PropTypes.array,
 };

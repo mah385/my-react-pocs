@@ -1,12 +1,14 @@
 import styles from "./MyReactFormCase_2.module.css";
-
+/*--------------------------------------------------------------------*/
 import { useRef } from "react";
-import { v4 as uuidv4 } from "uuid";
 import { toast } from "react-toastify";
-
+import { v4 as uuidv4 } from "uuid";
+/*--------------------------------------------------------------------*/
+import { DATA_ADDED_SUCCESSFULLY } from "../../constants/ResponseMessageConstants.js";
+/*--------------------------------------------------------------------*/
 import MyFormInput from "../MyForm/MyFormInput/MyFormInput.jsx";
 
-import { DATA_ADDED_SUCCESSFULLY } from "../../constants/ResponseMessageConstants.js";
+/*--------------------------------------------------------------------*/
 
 function MyReactFormCase_2() {
   const refFullName = useRef();

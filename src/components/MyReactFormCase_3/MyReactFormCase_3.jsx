@@ -1,11 +1,13 @@
 import styles from "./MyReactFormCase_3.module.css";
-
-import { v4 as uuidv4 } from "uuid";
+/*--------------------------------------------------------------------*/
 import { toast } from "react-toastify";
-
+import { v4 as uuidv4 } from "uuid";
+/*--------------------------------------------------------------------*/
+import { DATA_ADDED_SUCCESSFULLY } from "../../constants/ResponseMessageConstants.js";
+/*--------------------------------------------------------------------*/
 import MyFormInput from "../MyForm/MyFormInput/MyFormInput.jsx";
 
-import { DATA_ADDED_SUCCESSFULLY } from "../../constants/ResponseMessageConstants.js";
+/*--------------------------------------------------------------------*/
 
 function MyReactFormCase_3() {
   function handleFormSubmitToAddNewUser(e) {
