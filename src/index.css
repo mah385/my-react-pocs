@@ -1,0 +1,177 @@
+body {
+    font-style: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-family: "Urbanist", serif;
+    background-image: linear-gradient(teal, white, teal);
+}
+
+@font-face {
+    font-family: "Almendra";
+    src: url(./assets/google-fonts/Almendra/Almendra-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Alumni_Sans";
+    src: url(./assets/google-fonts/Alumni_Sans/AlumniSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Barlow_Condensed";
+    src: url(./assets/google-fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Belleza";
+    src: url(./assets/google-fonts/Belleza/Belleza-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Big_Shoulders_Display";
+    src: url(./assets/google-fonts/Big_Shoulders_Display/BigShouldersDisplay-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Black_Ops_One";
+    src: url(./assets/google-fonts/Black_Ops_One/BlackOpsOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Chakra_Petch";
+    src: url(./assets/google-fonts/Chakra_Petch/ChakraPetch-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Chillax";
+    src: url(./assets/google-fonts/Chillax/Chillax-Variable.ttf);
+}
+
+@font-face {
+    font-family: "Comfortaa";
+    src: url(./assets/google-fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Cookie";
+    src: url(./assets/google-fonts/Cookie/Cookie-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Dosis";
+    src: url(./assets/google-fonts/Dosis/Dosis-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Economica";
+    src: url(./assets/google-fonts/Economica/Economica-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Encode_Sans_Condensed";
+    src: url(./assets/google-fonts/Encode_Sans_Condensed/EncodeSansCondensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Great_Vibes";
+    src: url(./assets/google-fonts/Great_Vibes/GreatVibes-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Inconsolata";
+    src: url(./assets/google-fonts/Inconsolata/Inconsolata-VariableFont_wdth_wght.ttf);
+}
+
+@font-face {
+    font-family: "Josefin_Sans";
+    src: url(./assets/google-fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Karma";
+    src: url(./assets/google-fonts/Karma/Karma-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Laila";
+    src: url(./assets/google-fonts/Laila/Laila-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(./assets/google-fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat_Alternates";
+    src: url(./assets/google-fonts/Montserrat_Alternates/MontserratAlternates-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Nippo";
+    src: url(./assets/google-fonts/Nippo/Nippo-Variable.ttf);
+}
+
+@font-face {
+    font-family: "Pacifico";
+    src: url(./assets/google-fonts/Pacifico/Pacifico-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Pathway_Gothic_One";
+    src: url(./assets/google-fonts/Pathway_Gothic_One/PathwayGothicOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Philosopher";
+    src: url(./assets/google-fonts/Philosopher/Philosopher-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Rajdhani";
+    src: url(./assets/google-fonts/Rajdhani/Rajdhani-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url(./assets/google-fonts/Raleway/Raleway-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Roboto_Condensed";
+    src: url(./assets/google-fonts/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Sacramento";
+    src: url(./assets/google-fonts/Sacramento/Sacramento-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Sevillana";
+    src: url(./assets/google-fonts/Sevillana/Sevillana-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Sofia";
+    src: url(./assets/google-fonts/Sofia/Sofia-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Sofia_Sans_Condensed";
+    src: url(./assets/google-fonts/Sofia_Sans_Condensed/SofiaSansCondensed-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Tangerine";
+    src: url(./assets/google-fonts/Tangerine/Tangerine-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url(./assets/google-fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Urbanist";
+    src: url(./assets/google-fonts/Urbanist/Urbanist-VariableFont_wght.ttf);
+}
