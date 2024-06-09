@@ -3,7 +3,7 @@ body {
     font-weight: 600;
     font-size: medium;
     font-family: "Urbanist", serif;
-    background-color: #c6ffb3;
+    background-image: linear-gradient(lightcyan, white, lightcyan);
 }
 
 @font-face {

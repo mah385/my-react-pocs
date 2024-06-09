@@ -11,10 +11,10 @@ function App() {
   const [showBikeCrudFeature, setShowBikeCrudFeature] = useState(false);
 
   return (
-    <div className="app m-2">
+    <div className="app vh-100 d-flex flex-column align-items-center justify-content-center gap-2">
       <button
         type="button"
-        className="domainButton btn btn-sm btn-outline-dark w-100 mb-1 text-danger"
+        className="domainButton btn btn-sm btn-outline-dark w-75 text-danger"
         onClick={() => {
           setShowBikeCrudFeature((prevState) => {
             return !prevState;
@@ -23,7 +23,7 @@ function App() {
       >
         Show {!showBikeCrudFeature ? "Bike" : "Mobile"} CRUD Feature
       </button>
-      <div className="crud-feature d-flex gap-2 justify-content-center">
+      <div className="crud-feature d-flex gap-2">
         {showBikeCrudFeature ? <BikeCrudFeature /> : <MobileCrudFeature />}
       </div>
     </div>
