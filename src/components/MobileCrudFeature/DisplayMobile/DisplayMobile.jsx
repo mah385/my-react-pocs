@@ -5,10 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { MdDeleteForever, MdOutlineEdit } from "react-icons/md";
 /*-------------------------------------------------------------------*/
-import {
-  DELETE_MOBILE,
-  LOAD_MOBILE,
-} from "../../../redux-store/mobile/mobile-action-type.js";
+import { mobileAction } from "../../../redux-store/mobile/mobile-reducer.js";
 import { DATA_DELETED_SUCCESSFULLY } from "../../../constants/ResponseMessageConstants.js";
 
 /*-------------------------------------------------------------------*/
@@ -19,15 +16,12 @@ function DisplayMobile(props) {
   mobileList = useSelector((state) => state.useMobileReducer.mobileList);
 
   function onClickHandleDeleteMobileByMobileId(mobileId) {
-    dispatch({ type: DELETE_MOBILE, payload: { mobileId: mobileId } });
+    dispatch(mobileAction.deleteMobile({ mobileId: mobileId }));
     toast.success(DATA_DELETED_SUCCESSFULLY);
   }
 
   function onClickHandleLoadMobileForUpdating(mobileToBeUpdated) {
-    dispatch({
-      type: LOAD_MOBILE,
-      payload: { mobileToBeUpdated: mobileToBeUpdated },
-    });
+    dispatch(mobileAction.loadMobile({ mobileToBeUpdated: mobileToBeUpdated }));
     props.propToggleToShowUpdateComponent();
   }
 

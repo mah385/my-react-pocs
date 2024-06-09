@@ -1,5 +1,0 @@
-export const ADD_NEW_MOBILE = "ADD_NEW_MOBILE";
-export const DELETE_MOBILE = "DELETE_MOBILE";
-export const LOAD_MOBILE = "LOAD_MOBILE";
-export const RESET_MOBILE = "RESET_MOBILE";
-export const UPDATE_MOBILE = "UPDATE_MOBILE";

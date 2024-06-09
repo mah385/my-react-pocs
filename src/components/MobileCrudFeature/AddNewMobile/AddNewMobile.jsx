@@ -9,7 +9,7 @@ import {
   mobileBrandNameList,
   mobileStorageList,
 } from "../../../redux-store/mobile/mobile-master-data.js";
-import { ADD_NEW_MOBILE } from "../../../redux-store/mobile/mobile-action-type.js";
+import { mobileAction } from "../../../redux-store/mobile/mobile-reducer.js";
 import { DATA_ADDED_SUCCESSFULLY } from "../../../constants/ResponseMessageConstants.js";
 /*-------------------------------------------------------------------*/
 import MyFormInput from "../../MyForm/MyFormInput/MyFormInput.jsx";
@@ -36,10 +36,9 @@ function AddNewMobile() {
 
   function handleFormSubmitToAddNewMobile(e) {
     e.preventDefault();
-    dispatch({
-      type: ADD_NEW_MOBILE,
-      payload: { newMobile: { ...newMobile, id: uuidv4() } },
-    });
+    dispatch(
+      mobileAction.addNewMobile({ newMobile: { id: uuidv4(), ...newMobile } }),
+    );
     handleClearButton();
     toast.success(DATA_ADDED_SUCCESSFULLY);
   }

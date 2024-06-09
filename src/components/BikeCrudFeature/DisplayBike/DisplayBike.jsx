@@ -5,10 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { MdDeleteForever, MdOutlineEdit } from "react-icons/md";
 /*-------------------------------------------------------------------*/
-import {
-  DELETE_BIKE,
-  LOAD_BIKE,
-} from "../../../redux-store/bike/bike-action-type.js";
+import { bikeAction } from "../../../redux-store/bike/bike-reducer.js";
 import { DATA_DELETED_SUCCESSFULLY } from "../../../constants/ResponseMessageConstants.js";
 
 /*-------------------------------------------------------------------*/
@@ -19,15 +16,12 @@ function DisplayBike(props) {
   bikeList = useSelector((state) => state.useBikeReducer.bikeList);
 
   function onClickHandleDeleteBikeByBikeId(bikeId) {
-    dispatch({ type: DELETE_BIKE, payload: { bikeId: bikeId } });
+    dispatch(bikeAction.deleteBike({ bikeId: bikeId }));
     toast.success(DATA_DELETED_SUCCESSFULLY);
   }
 
   function onClickHandleLoadBikeForUpdating(bikeToBeUpdated) {
-    dispatch({
-      type: LOAD_BIKE,
-      payload: { bikeToBeUpdated: bikeToBeUpdated },
-    });
+    dispatch(bikeAction.loadBike({ bikeToBeUpdated: bikeToBeUpdated }));
     props.propToggleToShowUpdateComponent();
   }
 

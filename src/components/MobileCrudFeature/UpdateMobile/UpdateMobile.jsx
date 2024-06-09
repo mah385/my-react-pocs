@@ -6,13 +6,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 /*-------------------------------------------------------------------*/
 import {
-  RESET_MOBILE,
-  UPDATE_MOBILE,
-} from "../../../redux-store/mobile/mobile-action-type.js";
-import {
   mobileBrandNameList,
   mobileStorageList,
 } from "../../../redux-store/mobile/mobile-master-data.js";
+import { mobileAction } from "../../../redux-store/mobile/mobile-reducer.js";
 import { DATA_UPDATED_SUCCESSFULLY } from "../../../constants/ResponseMessageConstants.js";
 /*-------------------------------------------------------------------*/
 import MyFormInput from "../../MyForm/MyFormInput/MyFormInput.jsx";
@@ -29,10 +26,7 @@ function UpdateMobile(props) {
 
   function handleFormSubmitToUpdateMobile(e) {
     e.preventDefault();
-    dispatch({
-      type: UPDATE_MOBILE,
-      payload: { updatedMobile: updatedMobile },
-    });
+    dispatch(mobileAction.updateMobile({ updatedMobile: updatedMobile }));
     handleCancelButton();
     toast.success(DATA_UPDATED_SUCCESSFULLY);
   }
@@ -45,9 +39,7 @@ function UpdateMobile(props) {
   }
 
   function handleCancelButton() {
-    dispatch({
-      type: RESET_MOBILE,
-    });
+    dispatch(mobileAction.resetMobile());
     props.propToggleToShowUpdateComponent();
   }
 

@@ -5,10 +5,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 /*-------------------------------------------------------------------*/
-import {
-  RESET_BIKE,
-  UPDATE_BIKE,
-} from "../../../redux-store/bike/bike-action-type.js";
+import { bikeAction } from "../../../redux-store/bike/bike-reducer.js";
 import { bikeBrandNameList } from "../../../redux-store/bike/bike-master-data.js";
 import { DATA_UPDATED_SUCCESSFULLY } from "../../../constants/ResponseMessageConstants.js";
 /*-------------------------------------------------------------------*/
@@ -26,10 +23,7 @@ function UpdateBike(props) {
 
   function handleFormSubmitToUpdateBike(e) {
     e.preventDefault();
-    dispatch({
-      type: UPDATE_BIKE,
-      payload: { updatedBike: updatedBike },
-    });
+    dispatch(bikeAction.updateBike({ updatedBike: updatedBike }));
     handleCancelButton();
     toast.success(DATA_UPDATED_SUCCESSFULLY);
   }
@@ -42,9 +36,7 @@ function UpdateBike(props) {
   }
 
   function handleCancelButton() {
-    dispatch({
-      type: RESET_BIKE,
-    });
+    dispatch(bikeAction.resetBike());
     props.propToggleToShowUpdateComponent();
   }
 

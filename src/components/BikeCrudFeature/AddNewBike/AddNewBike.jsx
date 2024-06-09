@@ -5,8 +5,8 @@ import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { v4 as uuidv4 } from "uuid";
 /*-------------------------------------------------------------------*/
+import { bikeAction } from "../../../redux-store/bike/bike-reducer.js";
 import { bikeBrandNameList } from "../../../redux-store/bike/bike-master-data.js";
-import { ADD_NEW_BIKE } from "../../../redux-store/bike/bike-action-type.js";
 import { DATA_ADDED_SUCCESSFULLY } from "../../../constants/ResponseMessageConstants.js";
 /*-------------------------------------------------------------------*/
 import MyFormInput from "../../MyForm/MyFormInput/MyFormInput.jsx";
@@ -33,10 +33,7 @@ function AddNewBike() {
 
   function handleFormSubmitToAddNewBike(e) {
     e.preventDefault();
-    dispatch({
-      type: ADD_NEW_BIKE,
-      payload: { newBike: { ...newBike, id: uuidv4() } },
-    });
+    dispatch(bikeAction.addNewBike({ newBike: { ...newBike, id: uuidv4() } }));
     handleClearButton();
     toast.success(DATA_ADDED_SUCCESSFULLY);
   }
