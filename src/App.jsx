@@ -11,10 +11,10 @@ function App() {
   const [showBikeCrudFeature, setShowBikeCrudFeature] = useState(false);
 
   return (
-    <div className="app vh-100 d-flex flex-column align-items-center justify-content-center gap-2">
+    <div className="app vh-100 d-flex flex-column align-items-center gap-2">
       <button
         type="button"
-        className="domainButton btn btn-sm btn-outline-dark w-75 text-danger"
+        className="domainButton btn btn-sm btn-outline-dark w-75"
         onClick={() => {
           setShowBikeCrudFeature((prevState) => {
             return !prevState;
