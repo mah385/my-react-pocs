@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 import { DATA_ADDED_SUCCESSFULLY } from "../../constants/ResponseMessageConstants.js";
 /*--------------------------------------------------------------------*/
 import MyFormInput from "../MyForm/MyFormInput/MyFormInput.jsx";
+import MyFormSelect from "../MyForm/MyFormSelect/MyFormSelect.jsx";
 
 /*--------------------------------------------------------------------*/
 
@@ -37,8 +38,7 @@ function MyReactFormCase_3() {
         <MyFormInput type="text" name="username" label="Username" required />
         <MyFormInput type="email" name="email" label="Email" required />
         <MyFormInput type="date" name="dob" label="DOB" required />
-        <MyFormInput
-          type="select"
+        <MyFormSelect
           options={["MALE", "FEMALE", "OTHER"]}
           name="gender"
           label="Gender"
